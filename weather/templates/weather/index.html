@@ -1,0 +1,56 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h2 class="pb-5">Enter city name to search for weather</h2>
+            <form action="" method="POST" id="weather-form">
+                {% csrf_token %}
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        {{ form.city_name }}
+                    </div>
+                    <div class="control mt-5">
+                        <button type="submit" class="btn btn-secondary my-2" id="search_weather">
+              Search Address
+            </button>
+                        <button type="submit" class="btn btn-primary my-2" id="save_weather">
+              Save Address
+            </button>
+                        <button type="submit" class="btn btn-info my-2" id="retrieve_weather">
+              Retrieve Addresses
+            </button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <div class="alert alert-success" id="saved_to_db">
+                        Address successfully saved to the database
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" id="results">
+                        <div class="card-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="display-weather"></div>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="{% static 'app.js' %}"></script>
+{% endblock content %}

@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>CheckYourWeather</title>
+
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        .jumbotron {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            margin-bottom: 0;
+            background-color: #fff;
+        }
+        
+        .jumbotron p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .jumbotron h1 {
+            font-weight: 300;
+        }
+        
+        .jumbotron .container {
+            max-width: 40rem;
+        }
+        
+        footer {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.25rem;
+        }
+        
+        p {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong>CheckYourWeather</strong>
+                </a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
